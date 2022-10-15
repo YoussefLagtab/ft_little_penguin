@@ -1,0 +1,842 @@
+Oct 13 23:28:05 ylagtab kernel: Loaded 106975 symbols from 1 module.
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] Linux version 6.0.0-thor_kernel-11161-g041bc24d867a-dirty (root@ylagtab) (gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.38) #2 SMP PREEMPT_DYNAMIC Thu Oct 13 21:31:34 +01 2022
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] Command line: BOOT_IMAGE=/vmlinuz-linus-commit-041bc2-thor_kernel root=/dev/sda5 ro
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] [Firmware Bug]: TSC doesn't count with P0 frequency!
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] signal: max sigframe size: 1776
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] BIOS-provided physical RAM map:
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000003ffeffff] usable
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] BIOS-e820: [mem 0x000000003fff0000-0x000000003fffffff] ACPI data
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] NX (Execute Disable) protection: active
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] SMBIOS 2.5 present.
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] Hypervisor detected: KVM
+Oct 13 23:28:05 ylagtab kernel: [    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+Oct 13 23:28:05 ylagtab kernel: [    0.000004] kvm-clock: using sched offset of 7118580710 cycles
+Oct 13 23:28:05 ylagtab kernel: [    0.000008] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+Oct 13 23:28:05 ylagtab kernel: [    0.000013] tsc: Detected 2096.060 MHz processor
+Oct 13 23:28:05 ylagtab kernel: [    0.001336] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+Oct 13 23:28:05 ylagtab kernel: [    0.001339] e820: remove [mem 0x000a0000-0x000fffff] usable
+Oct 13 23:28:05 ylagtab kernel: [    0.001346] last_pfn = 0x3fff0 max_arch_pfn = 0x400000000
+Oct 13 23:28:05 ylagtab kernel: [    0.001363] Disabled
+Oct 13 23:28:05 ylagtab kernel: [    0.001365] x86/PAT: MTRRs disabled, skipping PAT initialization too.
+Oct 13 23:28:05 ylagtab kernel: [    0.001369] CPU MTRRs all blank - virtualized system.
+Oct 13 23:28:05 ylagtab kernel: [    0.001374] x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+Oct 13 23:28:05 ylagtab kernel: [    0.001415] found SMP MP-table at [mem 0x0009fff0-0x0009ffff]
+Oct 13 23:28:05 ylagtab kernel: [    0.001528] ACPI: Early table checksum verification disabled
+Oct 13 23:28:05 ylagtab kernel: [    0.001534] ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+Oct 13 23:28:05 ylagtab kernel: [    0.001540] ACPI: XSDT 0x000000003FFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+Oct 13 23:28:05 ylagtab kernel: [    0.001547] ACPI: FACP 0x000000003FFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+Oct 13 23:28:05 ylagtab kernel: [    0.001553] ACPI: DSDT 0x000000003FFF0480 002325 (v02 VBOX   VBOXBIOS 00000002 INTL 20200925)
+Oct 13 23:28:05 ylagtab kernel: [    0.001556] ACPI: FACS 0x000000003FFF0200 000040
+Oct 13 23:28:05 ylagtab kernel: [    0.001558] ACPI: FACS 0x000000003FFF0200 000040
+Oct 13 23:28:05 ylagtab kernel: [    0.001561] ACPI: APIC 0x000000003FFF0240 00006C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+Oct 13 23:28:05 ylagtab kernel: [    0.001564] ACPI: SSDT 0x000000003FFF02B0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20200925)
+Oct 13 23:28:05 ylagtab kernel: [    0.001566] ACPI: Reserving FACP table memory at [mem 0x3fff00f0-0x3fff01e3]
+Oct 13 23:28:05 ylagtab kernel: [    0.001568] ACPI: Reserving DSDT table memory at [mem 0x3fff0480-0x3fff27a4]
+Oct 13 23:28:05 ylagtab kernel: [    0.001569] ACPI: Reserving FACS table memory at [mem 0x3fff0200-0x3fff023f]
+Oct 13 23:28:05 ylagtab kernel: [    0.001570] ACPI: Reserving FACS table memory at [mem 0x3fff0200-0x3fff023f]
+Oct 13 23:28:05 ylagtab kernel: [    0.001571] ACPI: Reserving APIC table memory at [mem 0x3fff0240-0x3fff02ab]
+Oct 13 23:28:05 ylagtab kernel: [    0.001572] ACPI: Reserving SSDT table memory at [mem 0x3fff02b0-0x3fff047b]
+Oct 13 23:28:05 ylagtab kernel: [    0.001746] No NUMA configuration found
+Oct 13 23:28:05 ylagtab kernel: [    0.001747] Faking a node at [mem 0x0000000000000000-0x000000003ffeffff]
+Oct 13 23:28:05 ylagtab kernel: [    0.001751] NODE_DATA(0) allocated [mem 0x3ffec000-0x3ffeffff]
+Oct 13 23:28:05 ylagtab kernel: [    0.001774] Zone ranges:
+Oct 13 23:28:05 ylagtab kernel: [    0.001774]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+Oct 13 23:28:05 ylagtab kernel: [    0.001777]   DMA32    [mem 0x0000000001000000-0x000000003ffeffff]
+Oct 13 23:28:05 ylagtab kernel: [    0.001778]   Normal   empty
+Oct 13 23:28:05 ylagtab kernel: [    0.001779] Movable zone start for each node
+Oct 13 23:28:05 ylagtab kernel: [    0.001780] Early memory node ranges
+Oct 13 23:28:05 ylagtab kernel: [    0.001781]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+Oct 13 23:28:05 ylagtab kernel: [    0.001782]   node   0: [mem 0x0000000000100000-0x000000003ffeffff]
+Oct 13 23:28:05 ylagtab kernel: [    0.001785] Initmem setup node 0 [mem 0x0000000000001000-0x000000003ffeffff]
+Oct 13 23:28:05 ylagtab kernel: [    0.001795] On node 0, zone DMA: 1 pages in unavailable ranges
+Oct 13 23:28:05 ylagtab kernel: [    0.001845] On node 0, zone DMA: 97 pages in unavailable ranges
+Oct 13 23:28:05 ylagtab kernel: [    0.005539] On node 0, zone DMA32: 16 pages in unavailable ranges
+Oct 13 23:28:05 ylagtab kernel: [    0.005888] ACPI: PM-Timer IO Port: 0x4008
+Oct 13 23:28:05 ylagtab kernel: [    0.005959] IOAPIC[0]: apic_id 4, version 32, address 0xfec00000, GSI 0-23
+Oct 13 23:28:05 ylagtab kernel: [    0.005962] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Oct 13 23:28:05 ylagtab kernel: [    0.005965] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+Oct 13 23:28:05 ylagtab kernel: [    0.005969] ACPI: Using ACPI (MADT) for SMP configuration information
+Oct 13 23:28:05 ylagtab kernel: [    0.005977] smpboot: Allowing 4 CPUs, 0 hotplug CPUs
+Oct 13 23:28:05 ylagtab kernel: [    0.006006] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Oct 13 23:28:05 ylagtab kernel: [    0.006008] PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+Oct 13 23:28:05 ylagtab kernel: [    0.006009] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000effff]
+Oct 13 23:28:05 ylagtab kernel: [    0.006010] PM: hibernation: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+Oct 13 23:28:05 ylagtab kernel: [    0.006012] [mem 0x40000000-0xfebfffff] available for PCI devices
+Oct 13 23:28:05 ylagtab kernel: [    0.006013] Booting paravirtualized kernel on KVM
+Oct 13 23:28:05 ylagtab kernel: [    0.006017] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+Oct 13 23:28:05 ylagtab kernel: [    0.012770] setup_percpu: NR_CPUS:64 nr_cpumask_bits:4 nr_cpu_ids:4 nr_node_ids:1
+Oct 13 23:28:05 ylagtab kernel: [    0.013210] percpu: Embedded 53 pages/cpu s176296 r8192 d32600 u524288
+Oct 13 23:28:05 ylagtab kernel: [    0.013216] pcpu-alloc: s176296 r8192 d32600 u524288 alloc=1*2097152
+Oct 13 23:28:05 ylagtab kernel: [    0.013220] pcpu-alloc: [0] 0 1 2 3 
+Oct 13 23:28:05 ylagtab kernel: [    0.013246] Fallback order for Node 0: 0 
+Oct 13 23:28:05 ylagtab kernel: [    0.013249] Built 1 zonelists, mobility grouping on.  Total pages: 257776
+Oct 13 23:28:05 ylagtab kernel: [    0.013251] Policy zone: DMA32
+Oct 13 23:28:05 ylagtab kernel: [    0.013253] Kernel command line: BOOT_IMAGE=/vmlinuz-linus-commit-041bc2-thor_kernel root=/dev/sda5 ro
+Oct 13 23:28:05 ylagtab kernel: [    0.013287] Unknown kernel command line parameters "BOOT_IMAGE=/vmlinuz-linus-commit-041bc2-thor_kernel", will be passed to user space.
+Oct 13 23:28:05 ylagtab kernel: [    0.013333] random: crng init done
+Oct 13 23:28:05 ylagtab kernel: [    0.013470] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+Oct 13 23:28:05 ylagtab kernel: [    0.013543] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+Oct 13 23:28:05 ylagtab kernel: [    0.013581] mem auto-init: stack:off, heap alloc:off, heap free:off
+Oct 13 23:28:05 ylagtab kernel: [    0.017094] Memory: 993512K/1048120K available (16396K kernel code, 2676K rwdata, 4804K rodata, 1540K init, 856K bss, 54348K reserved, 0K cma-reserved)
+Oct 13 23:28:05 ylagtab kernel: [    0.017148] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Oct 13 23:28:05 ylagtab kernel: [    0.018803] Dynamic Preempt: voluntary
+Oct 13 23:28:05 ylagtab kernel: [    0.018841] rcu: Preemptible hierarchical RCU implementation.
+Oct 13 23:28:05 ylagtab kernel: [    0.018842] rcu: ^IRCU event tracing is enabled.
+Oct 13 23:28:05 ylagtab kernel: [    0.018842] rcu: ^IRCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=4.
+Oct 13 23:28:05 ylagtab kernel: [    0.018844] ^ITrampoline variant of Tasks RCU enabled.
+Oct 13 23:28:05 ylagtab kernel: [    0.018845] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+Oct 13 23:28:05 ylagtab kernel: [    0.018847] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+Oct 13 23:28:05 ylagtab kernel: [    0.020658] NR_IRQS: 4352, nr_irqs: 456, preallocated irqs: 16
+Oct 13 23:28:05 ylagtab kernel: [    0.020862] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+Oct 13 23:28:05 ylagtab kernel: [    0.026999] Console: colour VGA+ 80x25
+Oct 13 23:28:05 ylagtab kernel: [    0.054345] printk: console [tty0] enabled
+Oct 13 23:28:05 ylagtab kernel: [    0.054583] ACPI: Core revision 20220331
+Oct 13 23:28:05 ylagtab kernel: [    0.054891] APIC: Switch to symmetric I/O mode setup
+Oct 13 23:28:05 ylagtab kernel: [    0.056332] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+Oct 13 23:28:05 ylagtab kernel: [    0.056620] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x1e36a685b69, max_idle_ns: 440795255641 ns
+Oct 13 23:28:05 ylagtab kernel: [    0.057097] Calibrating delay loop (skipped) preset value.. 4192.12 BogoMIPS (lpj=2096060)
+Oct 13 23:28:05 ylagtab kernel: [    0.060108] pid_max: default: 32768 minimum: 301
+Oct 13 23:28:05 ylagtab kernel: [    0.060447] LSM: Security Framework initializing
+Oct 13 23:28:05 ylagtab kernel: [    0.060681] SELinux:  Initializing.
+Oct 13 23:28:05 ylagtab kernel: [    0.061116] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+Oct 13 23:28:05 ylagtab kernel: [    0.061468] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+Oct 13 23:28:05 ylagtab kernel: [    0.062463] Last level iTLB entries: 4KB 1024, 2MB 1024, 4MB 512
+Oct 13 23:28:05 ylagtab kernel: [    0.062732] Last level dTLB entries: 4KB 2048, 2MB 2048, 4MB 1024, 1GB 0
+Oct 13 23:28:05 ylagtab kernel: [    0.063076] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+Oct 13 23:28:05 ylagtab kernel: [    0.063459] Spectre V2 : Mitigation: Retpolines
+Oct 13 23:28:05 ylagtab kernel: [    0.063679] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+Oct 13 23:28:05 ylagtab kernel: [    0.064062] Spectre V2 : Spectre v2 / SpectreRSB : Filling RSB on VMEXIT
+Oct 13 23:28:05 ylagtab kernel: [    0.064344] RETBleed: Mitigation: untrained return thunk
+Oct 13 23:28:05 ylagtab kernel: [    0.077426] Freeing SMP alternatives memory: 44K
+Oct 13 23:28:05 ylagtab kernel: [    0.180340] smpboot: CPU0: AMD Ryzen 5 5500U with Radeon Graphics (family: 0x17, model: 0x68, stepping: 0x1)
+Oct 13 23:28:05 ylagtab kernel: [    0.180971] cblist_init_generic: Setting adjustable number of callback queues.
+Oct 13 23:28:05 ylagtab kernel: [    0.181063] cblist_init_generic: Setting shift to 2 and lim to 1.
+Oct 13 23:28:05 ylagtab kernel: [    0.181346] Performance Events: PMU not available due to virtualization, using software events only.
+Oct 13 23:28:05 ylagtab kernel: [    0.182070] rcu: Hierarchical SRCU implementation.
+Oct 13 23:28:05 ylagtab kernel: [    0.182301] rcu: ^IMax phase no-delay instances is 400.
+Oct 13 23:28:05 ylagtab kernel: [    0.183097] smp: Bringing up secondary CPUs ...
+Oct 13 23:28:05 ylagtab kernel: [    0.183427] x86: Booting SMP configuration:
+Oct 13 23:28:05 ylagtab kernel: [    0.183652] .... node  #0, CPUs:      #1 #2 #3
+Oct 13 23:28:05 ylagtab kernel: [    0.192209] smp: Brought up 1 node, 4 CPUs
+Oct 13 23:28:05 ylagtab kernel: [    0.193065] smpboot: Max logical packages: 1
+Oct 13 23:28:05 ylagtab kernel: [    0.193367] smpboot: Total of 4 processors activated (16768.48 BogoMIPS)
+Oct 13 23:28:05 ylagtab kernel: [    0.195184] devtmpfs: initialized
+Oct 13 23:28:05 ylagtab kernel: [    0.196158] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+Oct 13 23:28:05 ylagtab kernel: [    0.197067] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+Oct 13 23:28:05 ylagtab kernel: [    0.197605] PM: RTC time: 23:28:02, date: 2022-10-13
+Oct 13 23:28:05 ylagtab kernel: [    0.198296] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+Oct 13 23:28:05 ylagtab kernel: [    0.199078] audit: initializing netlink subsys (disabled)
+Oct 13 23:28:05 ylagtab kernel: [    0.199345] audit: type=2000 audit(1665714313.676:1): state=initialized audit_enabled=0 res=1
+Oct 13 23:28:05 ylagtab kernel: [    0.199345] thermal_sys: Registered thermal governor 'step_wise'
+Oct 13 23:28:05 ylagtab kernel: [    0.200065] thermal_sys: Registered thermal governor 'user_space'
+Oct 13 23:28:05 ylagtab kernel: [    0.201108] cpuidle: using governor menu
+Oct 13 23:28:05 ylagtab kernel: [    0.203307] PCI: Using configuration type 1 for base access
+Oct 13 23:28:05 ylagtab kernel: [    0.204064] PCI: Using configuration type 1 for extended access
+Oct 13 23:28:05 ylagtab kernel: [    0.211146] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+Oct 13 23:28:05 ylagtab kernel: [    0.213141] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+Oct 13 23:28:05 ylagtab kernel: [    0.213608] HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+Oct 13 23:28:05 ylagtab kernel: [    0.215117] ACPI: Added _OSI(Module Device)
+Oct 13 23:28:05 ylagtab kernel: [    0.215334] ACPI: Added _OSI(Processor Device)
+Oct 13 23:28:05 ylagtab kernel: [    0.215555] ACPI: Added _OSI(3.0 _SCP Extensions)
+Oct 13 23:28:05 ylagtab kernel: [    0.215803] ACPI: Added _OSI(Processor Aggregator Device)
+Oct 13 23:28:05 ylagtab kernel: [    0.218267] ACPI: 2 ACPI AML tables successfully acquired and loaded
+Oct 13 23:28:05 ylagtab kernel: [    0.415423] ACPI: Interpreter enabled
+Oct 13 23:28:05 ylagtab kernel: [    0.416092] ACPI: PM: (supports S0 S5)
+Oct 13 23:28:05 ylagtab kernel: [    0.416451] ACPI: Using IOAPIC for interrupt routing
+Oct 13 23:28:05 ylagtab kernel: [    0.417433] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Oct 13 23:28:05 ylagtab kernel: [    0.418063] PCI: Using E820 reservations for host bridge windows
+Oct 13 23:28:05 ylagtab kernel: [    0.419174] ACPI: Enabled 2 GPEs in block 00 to 07
+Oct 13 23:28:05 ylagtab kernel: [    0.423611] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Oct 13 23:28:05 ylagtab kernel: [    0.423899] acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI HPX-Type3]
+Oct 13 23:28:05 ylagtab kernel: [    0.424444] acpi PNP0A03:00: _OSC: platform does not support [PCIeCapability LTR]
+Oct 13 23:28:05 ylagtab kernel: [    0.425431] acpi PNP0A03:00: _OSC: not requesting control; platform does not support [PCIeCapability]
+Oct 13 23:28:05 ylagtab kernel: [    0.425846] acpi PNP0A03:00: _OSC: OS requested [PME PCIeCapability LTR]
+Oct 13 23:28:05 ylagtab kernel: [    0.426063] acpi PNP0A03:00: _OSC: platform willing to grant [PME]
+Oct 13 23:28:05 ylagtab kernel: [    0.426342] acpi PNP0A03:00: _OSC: platform retains control of PCIe features (AE_SUPPORT)
+Oct 13 23:28:05 ylagtab kernel: [    0.426842] PCI host bridge to bus 0000:00
+Oct 13 23:28:05 ylagtab kernel: [    0.427063] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+Oct 13 23:28:05 ylagtab kernel: [    0.427381] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+Oct 13 23:28:05 ylagtab kernel: [    0.427684] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+Oct 13 23:28:05 ylagtab kernel: [    0.428063] pci_bus 0000:00: root bus resource [mem 0x40000000-0xfdffffff window]
+Oct 13 23:28:05 ylagtab kernel: [    0.428414] pci_bus 0000:00: root bus resource [bus 00-ff]
+Oct 13 23:28:05 ylagtab kernel: [    0.428911] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+Oct 13 23:28:05 ylagtab kernel: [    0.429414] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+Oct 13 23:28:05 ylagtab kernel: [    0.430402] pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a
+Oct 13 23:28:05 ylagtab kernel: [    0.430897] pci 0000:00:01.1: reg 0x20: [io  0xd000-0xd00f]
+Oct 13 23:28:05 ylagtab kernel: [    0.431155] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+Oct 13 23:28:05 ylagtab kernel: [    0.431459] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+Oct 13 23:28:05 ylagtab kernel: [    0.431738] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+Oct 13 23:28:05 ylagtab kernel: [    0.432063] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+Oct 13 23:28:05 ylagtab kernel: [    0.432465] pci 0000:00:02.0: [15ad:0405] type 00 class 0x030000
+Oct 13 23:28:05 ylagtab kernel: [    0.436068] pci 0000:00:02.0: reg 0x10: [io  0xd010-0xd01f]
+Oct 13 23:28:05 ylagtab kernel: [    0.438064] pci 0000:00:02.0: reg 0x14: [mem 0xe0000000-0xe7ffffff pref]
+Oct 13 23:28:05 ylagtab kernel: [    0.441063] pci 0000:00:02.0: reg 0x18: [mem 0xf0000000-0xf01fffff]
+Oct 13 23:28:05 ylagtab kernel: [    0.449127] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+Oct 13 23:28:05 ylagtab kernel: [    0.451116] pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
+Oct 13 23:28:05 ylagtab kernel: [    0.452117] pci 0000:00:03.0: reg 0x10: [mem 0xf0200000-0xf021ffff]
+Oct 13 23:28:05 ylagtab kernel: [    0.454064] pci 0000:00:03.0: reg 0x18: [io  0xd020-0xd027]
+Oct 13 23:28:05 ylagtab kernel: [    0.458451] pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
+Oct 13 23:28:05 ylagtab kernel: [    0.460070] pci 0000:00:04.0: reg 0x10: [io  0xd040-0xd05f]
+Oct 13 23:28:05 ylagtab kernel: [    0.461096] pci 0000:00:04.0: reg 0x14: [mem 0xf0400000-0xf07fffff]
+Oct 13 23:28:05 ylagtab kernel: [    0.462098] pci 0000:00:04.0: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
+Oct 13 23:28:05 ylagtab kernel: [    0.466363] pci 0000:00:05.0: [8086:2415] type 00 class 0x040100
+Oct 13 23:28:05 ylagtab kernel: [    0.467188] pci 0000:00:05.0: reg 0x10: [io  0xd100-0xd1ff]
+Oct 13 23:28:05 ylagtab kernel: [    0.467505] pci 0000:00:05.0: reg 0x14: [io  0xd200-0xd23f]
+Oct 13 23:28:05 ylagtab kernel: [    0.468507] pci 0000:00:06.0: [106b:003f] type 00 class 0x0c0310
+Oct 13 23:28:05 ylagtab kernel: [    0.470061] pci 0000:00:06.0: reg 0x10: [mem 0xf0804000-0xf0804fff]
+Oct 13 23:28:05 ylagtab kernel: [    0.476377] pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
+Oct 13 23:28:05 ylagtab kernel: [    0.478102] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+Oct 13 23:28:05 ylagtab kernel: [    0.478650] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+Oct 13 23:28:05 ylagtab kernel: [    0.479278] pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601
+Oct 13 23:28:05 ylagtab kernel: [    0.481061] pci 0000:00:0d.0: reg 0x10: [io  0xd240-0xd247]
+Oct 13 23:28:05 ylagtab kernel: [    0.482096] pci 0000:00:0d.0: reg 0x14: [io  0xd248-0xd24b]
+Oct 13 23:28:05 ylagtab kernel: [    0.483100] pci 0000:00:0d.0: reg 0x18: [io  0xd250-0xd257]
+Oct 13 23:28:05 ylagtab kernel: [    0.484061] pci 0000:00:0d.0: reg 0x1c: [io  0xd258-0xd25b]
+Oct 13 23:28:05 ylagtab kernel: [    0.484797] pci 0000:00:0d.0: reg 0x20: [io  0xd260-0xd26f]
+Oct 13 23:28:05 ylagtab kernel: [    0.486061] pci 0000:00:0d.0: reg 0x24: [mem 0xf0806000-0xf0807fff]
+Oct 13 23:28:05 ylagtab kernel: [    0.489449] ACPI: PCI: Interrupt link LNKA configured for IRQ 11
+Oct 13 23:28:05 ylagtab kernel: [    0.490299] ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+Oct 13 23:28:05 ylagtab kernel: [    0.491095] ACPI: PCI: Interrupt link LNKC configured for IRQ 9
+Oct 13 23:28:05 ylagtab kernel: [    0.491435] ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+Oct 13 23:28:05 ylagtab kernel: [    0.492224] iommu: Default domain type: Translated 
+Oct 13 23:28:05 ylagtab kernel: [    0.492462] iommu: DMA domain TLB invalidation policy: lazy mode 
+Oct 13 23:28:05 ylagtab kernel: [    0.493137] SCSI subsystem initialized
+Oct 13 23:28:05 ylagtab kernel: [    0.494075] libata version 3.00 loaded.
+Oct 13 23:28:05 ylagtab kernel: [    0.494111] ACPI: bus type USB registered
+Oct 13 23:28:05 ylagtab kernel: [    0.494341] usbcore: registered new interface driver usbfs
+Oct 13 23:28:05 ylagtab kernel: [    0.494597] usbcore: registered new interface driver hub
+Oct 13 23:28:05 ylagtab kernel: [    0.495071] usbcore: registered new device driver usb
+Oct 13 23:28:05 ylagtab kernel: [    0.495323] pps_core: LinuxPPS API ver. 1 registered
+Oct 13 23:28:05 ylagtab kernel: [    0.496062] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Oct 13 23:28:05 ylagtab kernel: [    0.496461] PTP clock support registered
+Oct 13 23:28:05 ylagtab kernel: [    0.497119] Advanced Linux Sound Architecture Driver Initialized.
+Oct 13 23:28:05 ylagtab kernel: [    0.498121] NetLabel: Initializing
+Oct 13 23:28:05 ylagtab kernel: [    0.498315] NetLabel:  domain hash size = 128
+Oct 13 23:28:05 ylagtab kernel: [    0.498532] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+Oct 13 23:28:05 ylagtab kernel: [    0.499079] NetLabel:  unlabeled traffic allowed by default
+Oct 13 23:28:05 ylagtab kernel: [    0.499361] PCI: Using ACPI for IRQ routing
+Oct 13 23:28:05 ylagtab kernel: [    0.500064] PCI: pci_cache_line_size set to 64 bytes
+Oct 13 23:28:05 ylagtab kernel: [    0.500199] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+Oct 13 23:28:05 ylagtab kernel: [    0.500202] e820: reserve RAM buffer [mem 0x3fff0000-0x3fffffff]
+Oct 13 23:28:05 ylagtab kernel: [    0.500228] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+Oct 13 23:28:05 ylagtab kernel: [    0.500349] pci 0000:00:02.0: vgaarb: bridge control possible
+Oct 13 23:28:05 ylagtab kernel: [    0.500622] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+Oct 13 23:28:05 ylagtab kernel: [    0.501064] vgaarb: loaded
+Oct 13 23:28:05 ylagtab kernel: [    0.501373] clocksource: Switched to clocksource kvm-clock
+Oct 13 23:28:05 ylagtab kernel: [    0.501632] VFS: Disk quotas dquot_6.6.0
+Oct 13 23:28:05 ylagtab kernel: [    0.501833] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Oct 13 23:28:05 ylagtab kernel: [    0.502227] pnp: PnP ACPI init
+Oct 13 23:28:05 ylagtab kernel: [    0.503079] pnp: PnP ACPI: found 2 devices
+Oct 13 23:28:05 ylagtab kernel: [    0.528458] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+Oct 13 23:28:05 ylagtab kernel: [    0.528953] NET: Registered PF_INET protocol family
+Oct 13 23:28:05 ylagtab kernel: [    0.529280] IP idents hash table entries: 16384 (order: 5, 131072 bytes, linear)
+Oct 13 23:28:05 ylagtab kernel: [    0.529450] tcp_listen_portaddr_hash hash table entries: 512 (order: 1, 8192 bytes, linear)
+Oct 13 23:28:05 ylagtab kernel: [    0.529450] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Oct 13 23:28:05 ylagtab kernel: [    0.529450] TCP established hash table entries: 8192 (order: 4, 65536 bytes, linear)
+Oct 13 23:28:05 ylagtab kernel: [    0.529450] TCP bind hash table entries: 8192 (order: 6, 262144 bytes, linear)
+Oct 13 23:28:05 ylagtab kernel: [    0.529450] TCP: Hash tables configured (established 8192 bind 8192)
+Oct 13 23:28:05 ylagtab kernel: [    0.529450] UDP hash table entries: 512 (order: 2, 16384 bytes, linear)
+Oct 13 23:28:05 ylagtab kernel: [    0.529450] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes, linear)
+Oct 13 23:28:05 ylagtab kernel: [    0.529450] NET: Registered PF_UNIX/PF_LOCAL protocol family
+Oct 13 23:28:05 ylagtab kernel: [    0.533880] RPC: Registered named UNIX socket transport module.
+Oct 13 23:28:05 ylagtab kernel: [    0.534549] RPC: Registered udp transport module.
+Oct 13 23:28:05 ylagtab kernel: [    0.535027] RPC: Registered tcp transport module.
+Oct 13 23:28:05 ylagtab kernel: [    0.535483] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Oct 13 23:28:05 ylagtab kernel: [    0.536787] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+Oct 13 23:28:05 ylagtab kernel: [    0.537341] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+Oct 13 23:28:05 ylagtab kernel: [    0.537696] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+Oct 13 23:28:05 ylagtab kernel: [    0.537696] pci_bus 0000:00: resource 7 [mem 0x40000000-0xfdffffff window]
+Oct 13 23:28:05 ylagtab kernel: [    0.537696] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+Oct 13 23:28:05 ylagtab kernel: [    0.537696] PCI: CLS 0 bytes, default 64
+Oct 13 23:28:05 ylagtab kernel: [    0.537696] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x1e36a685b69, max_idle_ns: 440795255641 ns
+Oct 13 23:28:05 ylagtab kernel: [    0.558646] clocksource: Switched to clocksource tsc
+Oct 13 23:28:05 ylagtab kernel: [    0.559078] platform rtc_cmos: registered platform RTC device (no PNP device found)
+Oct 13 23:28:05 ylagtab kernel: [    0.562149] Initialise system trusted keyrings
+Oct 13 23:28:05 ylagtab kernel: [    0.562787] workingset: timestamp_bits=56 max_order=18 bucket_order=0
+Oct 13 23:28:05 ylagtab kernel: [    0.565662] NFS: Registering the id_resolver key type
+Oct 13 23:28:05 ylagtab kernel: [    0.565933] Key type id_resolver registered
+Oct 13 23:28:05 ylagtab kernel: [    0.566206] Key type id_legacy registered
+Oct 13 23:28:05 ylagtab kernel: [    0.566586] 9p: Installing v9fs 9p2000 file system support
+Oct 13 23:28:05 ylagtab kernel: [    0.571194] Key type asymmetric registered
+Oct 13 23:28:05 ylagtab kernel: [    0.571194] Asymmetric key parser 'x509' registered
+Oct 13 23:28:05 ylagtab kernel: [    0.571194] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
+Oct 13 23:28:05 ylagtab kernel: [    0.571194] io scheduler mq-deadline registered
+Oct 13 23:28:05 ylagtab kernel: [    0.571194] io scheduler kyber registered
+Oct 13 23:28:05 ylagtab kernel: [    0.574178] ACPI: AC: AC Adapter [AC] (off-line)
+Oct 13 23:28:05 ylagtab kernel: [    0.574483] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+Oct 13 23:28:05 ylagtab kernel: [    0.575026] ACPI: button: Power Button [PWRF]
+Oct 13 23:28:05 ylagtab kernel: [    0.575305] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+Oct 13 23:28:05 ylagtab kernel: [    0.575698] ACPI: button: Sleep Button [SLPF]
+Oct 13 23:28:05 ylagtab kernel: [    0.575984] ACPI: video: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+Oct 13 23:28:05 ylagtab kernel: [    0.575984] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input2
+Oct 13 23:28:05 ylagtab kernel: [    0.577467] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+Oct 13 23:28:05 ylagtab kernel: [    0.578303] ACPI: battery: Slot [BAT0] (battery present)
+Oct 13 23:28:05 ylagtab kernel: [    0.594921] Non-volatile memory driver v1.3
+Oct 13 23:28:05 ylagtab kernel: [    0.595492] Linux agpgart interface v0.103
+Oct 13 23:28:05 ylagtab kernel: [    0.595855] ACPI: bus type drm_connector registered
+Oct 13 23:28:05 ylagtab kernel: [    0.602232] loop: module loaded
+Oct 13 23:28:05 ylagtab kernel: [    0.602784] ahci 0000:00:0d.0: version 3.0
+Oct 13 23:28:05 ylagtab kernel: [    0.603996] ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
+Oct 13 23:28:05 ylagtab kernel: [    0.604748] ahci 0000:00:0d.0: AHCI 0001.0100 32 slots 1 ports 3 Gbps 0x1 impl SATA mode
+Oct 13 23:28:05 ylagtab kernel: [    0.605548] ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
+Oct 13 23:28:05 ylagtab kernel: [    0.607079] scsi host0: ahci
+Oct 13 23:28:05 ylagtab kernel: [    0.607661] ata1: SATA max UDMA/133 abar m8192@0xf0806000 port 0xf0806100 irq 21
+Oct 13 23:28:05 ylagtab kernel: [    0.608579] ata_piix 0000:00:01.1: version 2.13
+Oct 13 23:28:05 ylagtab kernel: [    0.609861] scsi host1: ata_piix
+Oct 13 23:28:05 ylagtab kernel: [    0.610817] scsi host2: ata_piix
+Oct 13 23:28:05 ylagtab kernel: [    0.611080] ata2: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+Oct 13 23:28:05 ylagtab kernel: [    0.611404] ata3: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+Oct 13 23:28:05 ylagtab kernel: [    0.612074] e100: Intel(R) PRO/100 Network Driver
+Oct 13 23:28:05 ylagtab kernel: [    0.612632] e100: Copyright(c) 1999-2006 Intel Corporation
+Oct 13 23:28:05 ylagtab kernel: [    0.612928] e1000: Intel(R) PRO/1000 Network Driver
+Oct 13 23:28:05 ylagtab kernel: [    0.626225] e1000: Copyright (c) 1999-2006 Intel Corporation.
+Oct 13 23:28:05 ylagtab kernel: [    0.827459] ata3.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+Oct 13 23:28:05 ylagtab kernel: [    0.932861] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+Oct 13 23:28:05 ylagtab kernel: [    0.933677] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+Oct 13 23:28:05 ylagtab kernel: [    0.934045] ata1.00: 79691776 sectors, multi 128: LBA48 NCQ (depth 32)
+Oct 13 23:28:05 ylagtab kernel: [    0.934917] ata1.00: configured for UDMA/133
+Oct 13 23:28:05 ylagtab kernel: [    0.935746] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+Oct 13 23:28:05 ylagtab kernel: [    0.938677] scsi 0:0:0:0: Attached scsi generic sg0 type 0
+Oct 13 23:28:05 ylagtab kernel: [    0.938883] sd 0:0:0:0: [sda] 79691776 512-byte logical blocks: (40.8 GB/38.0 GiB)
+Oct 13 23:28:05 ylagtab kernel: [    0.940078] scsi 2:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+Oct 13 23:28:05 ylagtab kernel: [    0.940624] sd 0:0:0:0: [sda] Write Protect is off
+Oct 13 23:28:05 ylagtab kernel: [    0.942142] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Oct 13 23:28:05 ylagtab kernel: [    0.942166] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Oct 13 23:28:05 ylagtab kernel: [    0.944935] sd 0:0:0:0: [sda] Preferred minimum I/O size 512 bytes
+Oct 13 23:28:05 ylagtab kernel: [    0.963214]  sda: sda1 sda2 < sda5 sda6 > sda3
+Oct 13 23:28:05 ylagtab kernel: [    0.965585] sd 0:0:0:0: [sda] Attached SCSI disk
+Oct 13 23:28:05 ylagtab kernel: [    0.971897] sr 2:0:0:0: [sr0] scsi3-mmc drive: 32x/32x xa/form2 tray
+Oct 13 23:28:05 ylagtab kernel: [    0.972524] cdrom: Uniform CD-ROM driver Revision: 3.20
+Oct 13 23:28:05 ylagtab kernel: [    0.984730] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:a6:b8:f0
+Oct 13 23:28:05 ylagtab kernel: [    0.997079] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+Oct 13 23:28:05 ylagtab kernel: [    0.997691] e1000e: Intel(R) PRO/1000 Network Driver
+Oct 13 23:28:05 ylagtab kernel: [    0.998023] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+Oct 13 23:28:05 ylagtab kernel: [    0.998023] sky2: driver version 1.30
+Oct 13 23:28:05 ylagtab kernel: [    1.000067] ohci-pci 0000:00:06.0: OHCI PCI host controller
+Oct 13 23:28:05 ylagtab kernel: [    1.000538] ohci-pci 0000:00:06.0: new USB bus registered, assigned bus number 1
+Oct 13 23:28:05 ylagtab kernel: [    1.001008] ohci-pci 0000:00:06.0: irq 22, io mem 0xf0804000
+Oct 13 23:28:05 ylagtab kernel: [    1.069857] sr 2:0:0:0: Attached scsi CD-ROM sr0
+Oct 13 23:28:05 ylagtab kernel: [    1.070690] sr 2:0:0:0: Attached scsi generic sg1 type 5
+Oct 13 23:28:05 ylagtab kernel: [    1.071553] usb usb1: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.00
+Oct 13 23:28:05 ylagtab kernel: [    1.072071] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Oct 13 23:28:05 ylagtab kernel: [    1.072239] usb usb1: Product: OHCI PCI host controller
+Oct 13 23:28:05 ylagtab kernel: [    1.072239] usb usb1: Manufacturer: Linux 6.0.0-thor_kernel-11161-g041bc24d867a-dirty ohci_hcd
+Oct 13 23:28:05 ylagtab kernel: [    1.072239] usb usb1: SerialNumber: 0000:00:06.0
+Oct 13 23:28:05 ylagtab kernel: [    1.073600] hub 1-0:1.0: USB hub found
+Oct 13 23:28:05 ylagtab kernel: [    1.073828] hub 1-0:1.0: 12 ports detected
+Oct 13 23:28:05 ylagtab kernel: [    1.074512] usbcore: registered new interface driver usblp
+Oct 13 23:28:05 ylagtab kernel: [    1.074512] usbcore: registered new interface driver usb-storage
+Oct 13 23:28:05 ylagtab kernel: [    1.074512] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+Oct 13 23:28:05 ylagtab kernel: [    1.076295] serio: i8042 KBD port at 0x60,0x64 irq 1
+Oct 13 23:28:05 ylagtab kernel: [    1.076550] serio: i8042 AUX port at 0x60,0x64 irq 12
+Oct 13 23:28:05 ylagtab kernel: [    1.078175] rtc_cmos rtc_cmos: registered as rtc0
+Oct 13 23:28:05 ylagtab kernel: [    1.078296] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input3
+Oct 13 23:28:05 ylagtab kernel: [    1.078523] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+Oct 13 23:28:05 ylagtab kernel: [    1.079671] fail to initialize ptp_kvm
+Oct 13 23:28:05 ylagtab kernel: [    1.079955] device-mapper: ioctl: 4.47.0-ioctl (2022-07-28) initialised: dm-devel@redhat.com
+Oct 13 23:28:05 ylagtab kernel: [    1.081412] hid: raw HID events driver (C) Jiri Kosina
+Oct 13 23:28:05 ylagtab kernel: [    1.081994] usbcore: registered new interface driver usbhid
+Oct 13 23:28:05 ylagtab kernel: [    1.082496] usbhid: USB HID core driver
+Oct 13 23:28:05 ylagtab kernel: [    1.083574] Initializing XFRM netlink socket
+Oct 13 23:28:05 ylagtab kernel: [    1.084269] NET: Registered PF_INET6 protocol family
+Oct 13 23:28:05 ylagtab kernel: [    1.085539] Segment Routing with IPv6
+Oct 13 23:28:05 ylagtab kernel: [    1.085767] In-situ OAM (IOAM) with IPv6
+Oct 13 23:28:05 ylagtab kernel: [    1.086032] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+Oct 13 23:28:05 ylagtab kernel: [    1.086353] NET: Registered PF_PACKET protocol family
+Oct 13 23:28:05 ylagtab kernel: [    1.086353] 9pnet: Installing 9P2000 support
+Oct 13 23:28:05 ylagtab kernel: [    1.087038] Key type dns_resolver registered
+Oct 13 23:28:05 ylagtab kernel: [    1.087867] IPI shorthand broadcast: enabled
+Oct 13 23:28:05 ylagtab kernel: [    1.088254] sched_clock: Marking stable (1052278497, 35917463)->(1142336968, -54141008)
+Oct 13 23:28:05 ylagtab kernel: [    1.100965] registered taskstats version 1
+Oct 13 23:28:05 ylagtab kernel: [    1.101410] Loading compiled-in X.509 certificates
+Oct 13 23:28:05 ylagtab kernel: [    1.102217] cryptomgr_test (68) used greatest stack depth: 15528 bytes left
+Oct 13 23:28:05 ylagtab kernel: [    1.106409] PM:   Magic number: 10:369:504
+Oct 13 23:28:05 ylagtab kernel: [    1.106706] printk: console [netcon0] enabled
+Oct 13 23:28:05 ylagtab kernel: [    1.106945] netconsole: network logging started
+Oct 13 23:28:05 ylagtab kernel: [    1.107492] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+Oct 13 23:28:05 ylagtab kernel: [    1.108211] kworker/u8:2 (90) used greatest stack depth: 14776 bytes left
+Oct 13 23:28:05 ylagtab kernel: [    1.109285] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+Oct 13 23:28:05 ylagtab kernel: [    1.109625] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+Oct 13 23:28:05 ylagtab kernel: [    1.110049] cfg80211: failed to load regulatory.db
+Oct 13 23:28:05 ylagtab kernel: [    1.110312] ALSA device list:
+Oct 13 23:28:05 ylagtab kernel: [    1.110621]   No soundcards found.
+Oct 13 23:28:05 ylagtab kernel: [    1.317336] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input5
+Oct 13 23:28:05 ylagtab kernel: [    1.318299] md: Waiting for all devices to be available before autodetect
+Oct 13 23:28:05 ylagtab kernel: [    1.318667] md: If you don't use raid, use raid=noautodetect
+Oct 13 23:28:05 ylagtab kernel: [    1.318948] md: Autodetecting RAID arrays.
+Oct 13 23:28:05 ylagtab kernel: [    1.319188] md: autorun ...
+Oct 13 23:28:05 ylagtab kernel: [    1.319423] md: ... autorun DONE.
+Oct 13 23:28:05 ylagtab kernel: [    1.330729] EXT4-fs (sda5): mounted filesystem with ordered data mode. Quota mode: none.
+Oct 13 23:28:05 ylagtab kernel: [    1.344030] VFS: Mounted root (ext4 filesystem) readonly on device 8:5.
+Oct 13 23:28:05 ylagtab kernel: [    1.345856] devtmpfs: mounted
+Oct 13 23:28:05 ylagtab kernel: [    1.347340] Freeing unused kernel image (initmem) memory: 1540K
+Oct 13 23:28:05 ylagtab kernel: [    1.348143] Write protecting the kernel read-only data: 24576k
+Oct 13 23:28:05 ylagtab kernel: [    1.349576] Freeing unused kernel image (text/rodata gap) memory: 2032K
+Oct 13 23:28:05 ylagtab kernel: [    1.350525] Freeing unused kernel image (rodata/data gap) memory: 1340K
+Oct 13 23:28:05 ylagtab kernel: [    1.411185] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+Oct 13 23:28:05 ylagtab kernel: [    1.411528] Run /sbin/init as init process
+Oct 13 23:28:05 ylagtab kernel: [    1.411757]   with arguments:
+Oct 13 23:28:05 ylagtab kernel: [    1.411758]     /sbin/init
+Oct 13 23:28:05 ylagtab kernel: [    1.411759]   with environment:
+Oct 13 23:28:05 ylagtab kernel: [    1.411760]     HOME=/
+Oct 13 23:28:05 ylagtab kernel: [    1.411761]     TERM=linux
+Oct 13 23:28:05 ylagtab kernel: [    1.411762]     BOOT_IMAGE=/vmlinuz-linus-commit-041bc2-thor_kernel
+Oct 13 23:28:05 ylagtab kernel: [    1.447274] usb 1-1: new full-speed USB device number 2 using ohci-pci
+Oct 13 23:28:05 ylagtab kernel: [    1.489337] stty (100) used greatest stack depth: 12848 bytes left
+Oct 13 23:28:05 ylagtab kernel: [    1.705316] usb 1-1: New USB device found, idVendor=80ee, idProduct=0021, bcdDevice= 1.00
+Oct 13 23:28:05 ylagtab kernel: [    1.705761] usb 1-1: New USB device strings: Mfr=1, Product=3, SerialNumber=0
+Oct 13 23:28:05 ylagtab kernel: [    1.721707] usb 1-1: Product: USB Tablet
+Oct 13 23:28:05 ylagtab kernel: [    1.722060] usb 1-1: Manufacturer: VirtualBox
+Oct 13 23:28:05 ylagtab kernel: [    1.734486] input: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb1/1-1/1-1:1.0/0003:80EE:0021.0001/input/input6
+Oct 13 23:28:05 ylagtab kernel: [    1.735723] hid-generic 0003:80EE:0021.0001: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-1/input0
+Oct 13 23:28:05 ylagtab kernel: <30>[    1.741487] udevd[177]: starting version 3.2.11
+Oct 13 23:28:05 ylagtab kernel: <30>[    1.758596] udevd[178]: starting eudev-3.2.11
+Oct 13 23:28:05 ylagtab kernel: [    1.815842] e1000 0000:00:03.0 enp0s3: renamed from eth0
+Oct 13 23:28:05 ylagtab kernel: [    3.431771] Adding 2876412k swap on /dev/sda6.  Priority:1 extents:1 across:2876412k 
+Oct 13 23:28:05 ylagtab kernel: [    3.456781] EXT4-fs (sda5): re-mounted. Quota mode: none.
+Oct 13 23:28:05 ylagtab kernel: [    3.526252] EXT4-fs (sda5): re-mounted. Quota mode: none.
+Oct 13 23:28:05 ylagtab kernel: [    3.542561] EXT4-fs (sda1): mounting ext2 file system using the ext4 subsystem
+Oct 13 23:28:05 ylagtab kernel: [    3.555427] EXT4-fs (sda1): mounted filesystem without journal. Quota mode: none.
+Oct 13 23:28:05 ylagtab kernel: [    3.556158] ext2 filesystem being mounted at /boot supports timestamps until 2038 (0x7fffffff)
+Oct 13 23:28:05 ylagtab kernel: [    5.046525] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Oct 13 23:28:05 ylagtab kernel: [    5.046823] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+Oct 13 23:29:45 ylagtab kernel: [  104.936551] e1000: enp0s3 NIC Link is Down
+Oct 13 23:29:47 ylagtab kernel: [  106.990338] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Oct 13 23:30:12 ylagtab kernel: [  131.953869] e1000: enp0s3 NIC Link is Down
+Oct 13 23:30:14 ylagtab kernel: [  133.976551] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Oct 13 23:30:41 ylagtab kernel: [  160.747243] e1000: enp0s3 NIC Link is Down
+Oct 13 23:30:43 ylagtab kernel: [  162.789955] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Oct 15 00:32:31 ylagtab kernel: klogd 1.5.1, log source = /proc/kmsg started.
+Oct 15 00:32:31 ylagtab kernel: Cannot find map file.
+Oct 15 00:32:31 ylagtab kernel: Loaded 106975 symbols from 1 module.
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] Linux version 6.0.0-thor_kernel-11161-g041bc24d867a-dirty (root@ylagtab) (gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.38) #2 SMP PREEMPT_DYNAMIC Thu Oct 13 21:31:34 +01 2022
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] Command line: BOOT_IMAGE=/vmlinuz-linus-commit-041bc2-thor_kernel root=/dev/sda5 ro
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] [Firmware Bug]: TSC doesn't count with P0 frequency!
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] signal: max sigframe size: 1776
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] BIOS-provided physical RAM map:
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000003ffeffff] usable
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] BIOS-e820: [mem 0x000000003fff0000-0x000000003fffffff] ACPI data
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] NX (Execute Disable) protection: active
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] SMBIOS 2.5 present.
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] Hypervisor detected: KVM
+Oct 15 00:32:31 ylagtab kernel: [    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+Oct 15 00:32:31 ylagtab kernel: [    0.000001] kvm-clock: using sched offset of 8187383825 cycles
+Oct 15 00:32:31 ylagtab kernel: [    0.000002] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+Oct 15 00:32:31 ylagtab kernel: [    0.000004] tsc: Detected 2096.060 MHz processor
+Oct 15 00:32:31 ylagtab kernel: [    0.000802] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+Oct 15 00:32:31 ylagtab kernel: [    0.000804] e820: remove [mem 0x000a0000-0x000fffff] usable
+Oct 15 00:32:31 ylagtab kernel: [    0.000807] last_pfn = 0x3fff0 max_arch_pfn = 0x400000000
+Oct 15 00:32:31 ylagtab kernel: [    0.000815] Disabled
+Oct 15 00:32:31 ylagtab kernel: [    0.000816] x86/PAT: MTRRs disabled, skipping PAT initialization too.
+Oct 15 00:32:31 ylagtab kernel: [    0.000818] CPU MTRRs all blank - virtualized system.
+Oct 15 00:32:31 ylagtab kernel: [    0.000820] x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+Oct 15 00:32:31 ylagtab kernel: [    0.000842] found SMP MP-table at [mem 0x0009fff0-0x0009ffff]
+Oct 15 00:32:31 ylagtab kernel: [    0.000956] ACPI: Early table checksum verification disabled
+Oct 15 00:32:31 ylagtab kernel: [    0.000959] ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+Oct 15 00:32:31 ylagtab kernel: [    0.000962] ACPI: XSDT 0x000000003FFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+Oct 15 00:32:31 ylagtab kernel: [    0.000966] ACPI: FACP 0x000000003FFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+Oct 15 00:32:31 ylagtab kernel: [    0.000969] ACPI: DSDT 0x000000003FFF0480 002325 (v02 VBOX   VBOXBIOS 00000002 INTL 20200925)
+Oct 15 00:32:31 ylagtab kernel: [    0.000971] ACPI: FACS 0x000000003FFF0200 000040
+Oct 15 00:32:31 ylagtab kernel: [    0.000973] ACPI: FACS 0x000000003FFF0200 000040
+Oct 15 00:32:31 ylagtab kernel: [    0.000974] ACPI: APIC 0x000000003FFF0240 00006C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+Oct 15 00:32:31 ylagtab kernel: [    0.000976] ACPI: SSDT 0x000000003FFF02B0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20200925)
+Oct 15 00:32:31 ylagtab kernel: [    0.000978] ACPI: Reserving FACP table memory at [mem 0x3fff00f0-0x3fff01e3]
+Oct 15 00:32:31 ylagtab kernel: [    0.000979] ACPI: Reserving DSDT table memory at [mem 0x3fff0480-0x3fff27a4]
+Oct 15 00:32:31 ylagtab kernel: [    0.000979] ACPI: Reserving FACS table memory at [mem 0x3fff0200-0x3fff023f]
+Oct 15 00:32:31 ylagtab kernel: [    0.000980] ACPI: Reserving FACS table memory at [mem 0x3fff0200-0x3fff023f]
+Oct 15 00:32:31 ylagtab kernel: [    0.000980] ACPI: Reserving APIC table memory at [mem 0x3fff0240-0x3fff02ab]
+Oct 15 00:32:31 ylagtab kernel: [    0.000981] ACPI: Reserving SSDT table memory at [mem 0x3fff02b0-0x3fff047b]
+Oct 15 00:32:31 ylagtab kernel: [    0.001080] No NUMA configuration found
+Oct 15 00:32:31 ylagtab kernel: [    0.001081] Faking a node at [mem 0x0000000000000000-0x000000003ffeffff]
+Oct 15 00:32:31 ylagtab kernel: [    0.001083] NODE_DATA(0) allocated [mem 0x3ffec000-0x3ffeffff]
+Oct 15 00:32:31 ylagtab kernel: [    0.001094] Zone ranges:
+Oct 15 00:32:31 ylagtab kernel: [    0.001095]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+Oct 15 00:32:31 ylagtab kernel: [    0.001096]   DMA32    [mem 0x0000000001000000-0x000000003ffeffff]
+Oct 15 00:32:31 ylagtab kernel: [    0.001097]   Normal   empty
+Oct 15 00:32:31 ylagtab kernel: [    0.001098] Movable zone start for each node
+Oct 15 00:32:31 ylagtab kernel: [    0.001099] Early memory node ranges
+Oct 15 00:32:31 ylagtab kernel: [    0.001099]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+Oct 15 00:32:31 ylagtab kernel: [    0.001100]   node   0: [mem 0x0000000000100000-0x000000003ffeffff]
+Oct 15 00:32:31 ylagtab kernel: [    0.001101] Initmem setup node 0 [mem 0x0000000000001000-0x000000003ffeffff]
+Oct 15 00:32:31 ylagtab kernel: [    0.001479] On node 0, zone DMA: 1 pages in unavailable ranges
+Oct 15 00:32:31 ylagtab kernel: [    0.001494] On node 0, zone DMA: 97 pages in unavailable ranges
+Oct 15 00:32:31 ylagtab kernel: [    0.003466] On node 0, zone DMA32: 16 pages in unavailable ranges
+Oct 15 00:32:31 ylagtab kernel: [    0.003656] ACPI: PM-Timer IO Port: 0x4008
+Oct 15 00:32:31 ylagtab kernel: [    0.003704] IOAPIC[0]: apic_id 4, version 32, address 0xfec00000, GSI 0-23
+Oct 15 00:32:31 ylagtab kernel: [    0.003707] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Oct 15 00:32:31 ylagtab kernel: [    0.003708] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+Oct 15 00:32:31 ylagtab kernel: [    0.003711] ACPI: Using ACPI (MADT) for SMP configuration information
+Oct 15 00:32:31 ylagtab kernel: [    0.003716] smpboot: Allowing 4 CPUs, 0 hotplug CPUs
+Oct 15 00:32:31 ylagtab kernel: [    0.003736] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Oct 15 00:32:31 ylagtab kernel: [    0.003737] PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+Oct 15 00:32:31 ylagtab kernel: [    0.003738] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000effff]
+Oct 15 00:32:31 ylagtab kernel: [    0.003738] PM: hibernation: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+Oct 15 00:32:31 ylagtab kernel: [    0.003740] [mem 0x40000000-0xfebfffff] available for PCI devices
+Oct 15 00:32:31 ylagtab kernel: [    0.003741] Booting paravirtualized kernel on KVM
+Oct 15 00:32:31 ylagtab kernel: [    0.003743] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+Oct 15 00:32:31 ylagtab kernel: [    0.007864] setup_percpu: NR_CPUS:64 nr_cpumask_bits:4 nr_cpu_ids:4 nr_node_ids:1
+Oct 15 00:32:31 ylagtab kernel: [    0.008374] percpu: Embedded 53 pages/cpu s176296 r8192 d32600 u524288
+Oct 15 00:32:31 ylagtab kernel: [    0.008377] pcpu-alloc: s176296 r8192 d32600 u524288 alloc=1*2097152
+Oct 15 00:32:31 ylagtab kernel: [    0.008380] pcpu-alloc: [0] 0 1 2 3 
+Oct 15 00:32:31 ylagtab kernel: [    0.008395] Fallback order for Node 0: 0 
+Oct 15 00:32:31 ylagtab kernel: [    0.008397] Built 1 zonelists, mobility grouping on.  Total pages: 257776
+Oct 15 00:32:31 ylagtab kernel: [    0.008399] Policy zone: DMA32
+Oct 15 00:32:31 ylagtab kernel: [    0.008400] Kernel command line: BOOT_IMAGE=/vmlinuz-linus-commit-041bc2-thor_kernel root=/dev/sda5 ro
+Oct 15 00:32:31 ylagtab kernel: [    0.008426] Unknown kernel command line parameters "BOOT_IMAGE=/vmlinuz-linus-commit-041bc2-thor_kernel", will be passed to user space.
+Oct 15 00:32:31 ylagtab kernel: [    0.008456] random: crng init done
+Oct 15 00:32:31 ylagtab kernel: [    0.008558] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+Oct 15 00:32:31 ylagtab kernel: [    0.008621] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+Oct 15 00:32:31 ylagtab kernel: [    0.008652] mem auto-init: stack:off, heap alloc:off, heap free:off
+Oct 15 00:32:31 ylagtab kernel: [    0.010723] Memory: 993512K/1048120K available (16396K kernel code, 2676K rwdata, 4804K rodata, 1540K init, 856K bss, 54348K reserved, 0K cma-reserved)
+Oct 15 00:32:31 ylagtab kernel: [    0.010755] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Oct 15 00:32:31 ylagtab kernel: [    0.011851] Dynamic Preempt: voluntary
+Oct 15 00:32:31 ylagtab kernel: [    0.011887] rcu: Preemptible hierarchical RCU implementation.
+Oct 15 00:32:31 ylagtab kernel: [    0.011887] rcu: ^IRCU event tracing is enabled.
+Oct 15 00:32:31 ylagtab kernel: [    0.011888] rcu: ^IRCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=4.
+Oct 15 00:32:31 ylagtab kernel: [    0.011890] ^ITrampoline variant of Tasks RCU enabled.
+Oct 15 00:32:31 ylagtab kernel: [    0.011892] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+Oct 15 00:32:31 ylagtab kernel: [    0.011893] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+Oct 15 00:32:31 ylagtab kernel: [    0.013023] NR_IRQS: 4352, nr_irqs: 456, preallocated irqs: 16
+Oct 15 00:32:31 ylagtab kernel: [    0.013205] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+Oct 15 00:32:31 ylagtab kernel: [    0.016962] Console: colour VGA+ 80x25
+Oct 15 00:32:31 ylagtab kernel: [    0.033602] printk: console [tty0] enabled
+Oct 15 00:32:31 ylagtab kernel: [    0.033748] ACPI: Core revision 20220331
+Oct 15 00:32:31 ylagtab kernel: [    0.033960] APIC: Switch to symmetric I/O mode setup
+Oct 15 00:32:31 ylagtab kernel: [    0.034886] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+Oct 15 00:32:31 ylagtab kernel: [    0.035060] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x1e36a685b69, max_idle_ns: 440795255641 ns
+Oct 15 00:32:31 ylagtab kernel: [    0.035370] Calibrating delay loop (skipped) preset value.. 4192.12 BogoMIPS (lpj=2096060)
+Oct 15 00:32:31 ylagtab kernel: [    0.035632] pid_max: default: 32768 minimum: 301
+Oct 15 00:32:31 ylagtab kernel: [    0.035778] LSM: Security Framework initializing
+Oct 15 00:32:31 ylagtab kernel: [    0.035917] SELinux:  Initializing.
+Oct 15 00:32:31 ylagtab kernel: [    0.036060] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+Oct 15 00:32:31 ylagtab kernel: [    0.036276] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+Oct 15 00:32:31 ylagtab kernel: [    0.036365] Last level iTLB entries: 4KB 1024, 2MB 1024, 4MB 512
+Oct 15 00:32:31 ylagtab kernel: [    0.036365] Last level dTLB entries: 4KB 2048, 2MB 2048, 4MB 1024, 1GB 0
+Oct 15 00:32:31 ylagtab kernel: [    0.036365] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+Oct 15 00:32:31 ylagtab kernel: [    0.036365] Spectre V2 : Mitigation: Retpolines
+Oct 15 00:32:31 ylagtab kernel: [    0.036365] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+Oct 15 00:32:31 ylagtab kernel: [    0.036365] Spectre V2 : Spectre v2 / SpectreRSB : Filling RSB on VMEXIT
+Oct 15 00:32:31 ylagtab kernel: [    0.036369] RETBleed: Mitigation: untrained return thunk
+Oct 15 00:32:31 ylagtab kernel: [    0.042574] Freeing SMP alternatives memory: 44K
+Oct 15 00:32:31 ylagtab kernel: [    0.146213] smpboot: CPU0: AMD Ryzen 5 5500U with Radeon Graphics (family: 0x17, model: 0x68, stepping: 0x1)
+Oct 15 00:32:31 ylagtab kernel: [    0.146365] cblist_init_generic: Setting adjustable number of callback queues.
+Oct 15 00:32:31 ylagtab kernel: [    0.146365] cblist_init_generic: Setting shift to 2 and lim to 1.
+Oct 15 00:32:31 ylagtab kernel: [    0.146365] Performance Events: PMU not available due to virtualization, using software events only.
+Oct 15 00:32:31 ylagtab kernel: [    0.146391] rcu: Hierarchical SRCU implementation.
+Oct 15 00:32:31 ylagtab kernel: [    0.146532] rcu: ^IMax phase no-delay instances is 400.
+Oct 15 00:32:31 ylagtab kernel: [    0.146886] smp: Bringing up secondary CPUs ...
+Oct 15 00:32:31 ylagtab kernel: [    0.147077] x86: Booting SMP configuration:
+Oct 15 00:32:31 ylagtab kernel: [    0.147211] .... node  #0, CPUs:      #1 #2 #3
+Oct 15 00:32:31 ylagtab kernel: [    0.150450] smp: Brought up 1 node, 4 CPUs
+Oct 15 00:32:31 ylagtab kernel: [    0.151508] smpboot: Max logical packages: 1
+Oct 15 00:32:31 ylagtab kernel: [    0.151643] smpboot: Total of 4 processors activated (16768.48 BogoMIPS)
+Oct 15 00:32:31 ylagtab kernel: [    0.151928] devtmpfs: initialized
+Oct 15 00:32:31 ylagtab kernel: [    0.152488] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+Oct 15 00:32:31 ylagtab kernel: [    0.152685] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+Oct 15 00:32:31 ylagtab kernel: [    0.152911] PM: RTC time: 00:32:24, date: 2022-10-15
+Oct 15 00:32:31 ylagtab kernel: [    0.153486] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+Oct 15 00:32:31 ylagtab kernel: [    0.153696] audit: initializing netlink subsys (disabled)
+Oct 15 00:32:31 ylagtab kernel: [    0.153876] audit: type=2000 audit(1665793954.459:1): state=initialized audit_enabled=0 res=1
+Oct 15 00:32:31 ylagtab kernel: [    0.153876] thermal_sys: Registered thermal governor 'step_wise'
+Oct 15 00:32:31 ylagtab kernel: [    0.153876] thermal_sys: Registered thermal governor 'user_space'
+Oct 15 00:32:31 ylagtab kernel: [    0.154396] cpuidle: using governor menu
+Oct 15 00:32:31 ylagtab kernel: [    0.154825] PCI: Using configuration type 1 for base access
+Oct 15 00:32:31 ylagtab kernel: [    0.155367] PCI: Using configuration type 1 for extended access
+Oct 15 00:32:31 ylagtab kernel: [    0.157463] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+Oct 15 00:32:31 ylagtab kernel: [    0.157743] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+Oct 15 00:32:31 ylagtab kernel: [    0.157743] HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+Oct 15 00:32:31 ylagtab kernel: [    0.158404] ACPI: Added _OSI(Module Device)
+Oct 15 00:32:31 ylagtab kernel: [    0.158540] ACPI: Added _OSI(Processor Device)
+Oct 15 00:32:31 ylagtab kernel: [    0.158684] ACPI: Added _OSI(3.0 _SCP Extensions)
+Oct 15 00:32:31 ylagtab kernel: [    0.158830] ACPI: Added _OSI(Processor Aggregator Device)
+Oct 15 00:32:31 ylagtab kernel: [    0.160207] ACPI: 2 ACPI AML tables successfully acquired and loaded
+Oct 15 00:32:31 ylagtab kernel: [    0.247950] ACPI: Interpreter enabled
+Oct 15 00:32:31 ylagtab kernel: [    0.247951] ACPI: PM: (supports S0 S5)
+Oct 15 00:32:31 ylagtab kernel: [    0.248369] ACPI: Using IOAPIC for interrupt routing
+Oct 15 00:32:31 ylagtab kernel: [    0.249477] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Oct 15 00:32:31 ylagtab kernel: [    0.250366] PCI: Using E820 reservations for host bridge windows
+Oct 15 00:32:31 ylagtab kernel: [    0.250595] ACPI: Enabled 2 GPEs in block 00 to 07
+Oct 15 00:32:31 ylagtab kernel: [    0.253146] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Oct 15 00:32:31 ylagtab kernel: [    0.253329] acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI HPX-Type3]
+Oct 15 00:32:31 ylagtab kernel: [    0.253589] acpi PNP0A03:00: _OSC: platform does not support [PCIeCapability LTR]
+Oct 15 00:32:31 ylagtab kernel: [    0.254025] acpi PNP0A03:00: _OSC: not requesting control; platform does not support [PCIeCapability]
+Oct 15 00:32:31 ylagtab kernel: [    0.254367] acpi PNP0A03:00: _OSC: OS requested [PME PCIeCapability LTR]
+Oct 15 00:32:31 ylagtab kernel: [    0.254544] acpi PNP0A03:00: _OSC: platform willing to grant [PME]
+Oct 15 00:32:31 ylagtab kernel: [    0.254724] acpi PNP0A03:00: _OSC: platform retains control of PCIe features (AE_SUPPORT)
+Oct 15 00:32:31 ylagtab kernel: [    0.255027] PCI host bridge to bus 0000:00
+Oct 15 00:32:31 ylagtab kernel: [    0.255175] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+Oct 15 00:32:31 ylagtab kernel: [    0.255367] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+Oct 15 00:32:31 ylagtab kernel: [    0.255542] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+Oct 15 00:32:31 ylagtab kernel: [    0.255767] pci_bus 0000:00: root bus resource [mem 0x40000000-0xfdffffff window]
+Oct 15 00:32:31 ylagtab kernel: [    0.255985] pci_bus 0000:00: root bus resource [bus 00-ff]
+Oct 15 00:32:31 ylagtab kernel: [    0.256390] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+Oct 15 00:32:31 ylagtab kernel: [    0.256767] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+Oct 15 00:32:31 ylagtab kernel: [    0.257199] pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a
+Oct 15 00:32:31 ylagtab kernel: [    0.257502] pci 0000:00:01.1: reg 0x20: [io  0xd000-0xd00f]
+Oct 15 00:32:31 ylagtab kernel: [    0.257712] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+Oct 15 00:32:31 ylagtab kernel: [    0.257900] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+Oct 15 00:32:31 ylagtab kernel: [    0.258070] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+Oct 15 00:32:31 ylagtab kernel: [    0.258268] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+Oct 15 00:32:31 ylagtab kernel: [    0.258444] pci 0000:00:02.0: [15ad:0405] type 00 class 0x030000
+Oct 15 00:32:31 ylagtab kernel: [    0.259369] pci 0000:00:02.0: reg 0x10: [io  0xd010-0xd01f]
+Oct 15 00:32:31 ylagtab kernel: [    0.260368] pci 0000:00:02.0: reg 0x14: [mem 0xe0000000-0xe7ffffff pref]
+Oct 15 00:32:31 ylagtab kernel: [    0.261367] pci 0000:00:02.0: reg 0x18: [mem 0xf0000000-0xf01fffff]
+Oct 15 00:32:31 ylagtab kernel: [    0.267408] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+Oct 15 00:32:31 ylagtab kernel: [    0.269514] pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
+Oct 15 00:32:31 ylagtab kernel: [    0.270202] pci 0000:00:03.0: reg 0x10: [mem 0xf0200000-0xf021ffff]
+Oct 15 00:32:31 ylagtab kernel: [    0.271365] pci 0000:00:03.0: reg 0x18: [io  0xd020-0xd027]
+Oct 15 00:32:31 ylagtab kernel: [    0.273108] pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
+Oct 15 00:32:31 ylagtab kernel: [    0.273398] pci 0000:00:04.0: reg 0x10: [io  0xd040-0xd05f]
+Oct 15 00:32:31 ylagtab kernel: [    0.274038] pci 0000:00:04.0: reg 0x14: [mem 0xf0400000-0xf07fffff]
+Oct 15 00:32:31 ylagtab kernel: [    0.274895] pci 0000:00:04.0: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
+Oct 15 00:32:31 ylagtab kernel: [    0.275365] pci 0000:00:05.0: [8086:2415] type 00 class 0x040100
+Oct 15 00:32:31 ylagtab kernel: [    0.276420] pci 0000:00:05.0: reg 0x10: [io  0xd100-0xd1ff]
+Oct 15 00:32:31 ylagtab kernel: [    0.276609] pci 0000:00:05.0: reg 0x14: [io  0xd200-0xd23f]
+Oct 15 00:32:31 ylagtab kernel: [    0.277050] pci 0000:00:06.0: [106b:003f] type 00 class 0x0c0310
+Oct 15 00:32:31 ylagtab kernel: [    0.278028] pci 0000:00:06.0: reg 0x10: [mem 0xf0804000-0xf0804fff]
+Oct 15 00:32:31 ylagtab kernel: [    0.280516] pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
+Oct 15 00:32:31 ylagtab kernel: [    0.280895] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+Oct 15 00:32:31 ylagtab kernel: [    0.281118] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+Oct 15 00:32:31 ylagtab kernel: [    0.281491] pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601
+Oct 15 00:32:31 ylagtab kernel: [    0.282225] pci 0000:00:0d.0: reg 0x10: [io  0xd240-0xd247]
+Oct 15 00:32:31 ylagtab kernel: [    0.282731] pci 0000:00:0d.0: reg 0x14: [io  0xd248-0xd24b]
+Oct 15 00:32:31 ylagtab kernel: [    0.283365] pci 0000:00:0d.0: reg 0x18: [io  0xd250-0xd257]
+Oct 15 00:32:31 ylagtab kernel: [    0.283869] pci 0000:00:0d.0: reg 0x1c: [io  0xd258-0xd25b]
+Oct 15 00:32:31 ylagtab kernel: [    0.284365] pci 0000:00:0d.0: reg 0x20: [io  0xd260-0xd26f]
+Oct 15 00:32:31 ylagtab kernel: [    0.284840] pci 0000:00:0d.0: reg 0x24: [mem 0xf0806000-0xf0807fff]
+Oct 15 00:32:31 ylagtab kernel: [    0.286035] ACPI: PCI: Interrupt link LNKA configured for IRQ 11
+Oct 15 00:32:31 ylagtab kernel: [    0.286689] ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+Oct 15 00:32:31 ylagtab kernel: [    0.287149] ACPI: PCI: Interrupt link LNKC configured for IRQ 9
+Oct 15 00:32:31 ylagtab kernel: [    0.287410] ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+Oct 15 00:32:31 ylagtab kernel: [    0.287673] iommu: Default domain type: Translated 
+Oct 15 00:32:31 ylagtab kernel: [    0.287819] iommu: DMA domain TLB invalidation policy: lazy mode 
+Oct 15 00:32:31 ylagtab kernel: [    0.288049] SCSI subsystem initialized
+Oct 15 00:32:31 ylagtab kernel: [    0.288409] libata version 3.00 loaded.
+Oct 15 00:32:31 ylagtab kernel: [    0.288409] ACPI: bus type USB registered
+Oct 15 00:32:31 ylagtab kernel: [    0.288544] usbcore: registered new interface driver usbfs
+Oct 15 00:32:31 ylagtab kernel: [    0.288702] usbcore: registered new interface driver hub
+Oct 15 00:32:31 ylagtab kernel: [    0.288857] usbcore: registered new device driver usb
+Oct 15 00:32:31 ylagtab kernel: [    0.289042] pps_core: LinuxPPS API ver. 1 registered
+Oct 15 00:32:31 ylagtab kernel: [    0.289367] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Oct 15 00:32:31 ylagtab kernel: [    0.289618] PTP clock support registered
+Oct 15 00:32:31 ylagtab kernel: [    0.289768] Advanced Linux Sound Architecture Driver Initialized.
+Oct 15 00:32:31 ylagtab kernel: [    0.289768] NetLabel: Initializing
+Oct 15 00:32:31 ylagtab kernel: [    0.290367] NetLabel:  domain hash size = 128
+Oct 15 00:32:31 ylagtab kernel: [    0.290501] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+Oct 15 00:32:31 ylagtab kernel: [    0.290667] NetLabel:  unlabeled traffic allowed by default
+Oct 15 00:32:31 ylagtab kernel: [    0.290842] PCI: Using ACPI for IRQ routing
+Oct 15 00:32:31 ylagtab kernel: [    0.290842] PCI: pci_cache_line_size set to 64 bytes
+Oct 15 00:32:31 ylagtab kernel: [    0.290842] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+Oct 15 00:32:31 ylagtab kernel: [    0.290842] e820: reserve RAM buffer [mem 0x3fff0000-0x3fffffff]
+Oct 15 00:32:31 ylagtab kernel: [    0.291382] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+Oct 15 00:32:31 ylagtab kernel: [    0.291542] pci 0000:00:02.0: vgaarb: bridge control possible
+Oct 15 00:32:31 ylagtab kernel: [    0.291699] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+Oct 15 00:32:31 ylagtab kernel: [    0.291699] vgaarb: loaded
+Oct 15 00:32:31 ylagtab kernel: [    0.291699] clocksource: Switched to clocksource kvm-clock
+Oct 15 00:32:31 ylagtab kernel: [    0.293566] VFS: Disk quotas dquot_6.6.0
+Oct 15 00:32:31 ylagtab kernel: [    0.293566] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Oct 15 00:32:31 ylagtab kernel: [    0.293566] pnp: PnP ACPI init
+Oct 15 00:32:31 ylagtab kernel: [    0.293566] pnp: PnP ACPI: found 2 devices
+Oct 15 00:32:31 ylagtab kernel: [    0.313523] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+Oct 15 00:32:31 ylagtab kernel: [    0.313813] NET: Registered PF_INET protocol family
+Oct 15 00:32:31 ylagtab kernel: [    0.313997] IP idents hash table entries: 16384 (order: 5, 131072 bytes, linear)
+Oct 15 00:32:31 ylagtab kernel: [    0.314406] tcp_listen_portaddr_hash hash table entries: 512 (order: 1, 8192 bytes, linear)
+Oct 15 00:32:31 ylagtab kernel: [    0.314518] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Oct 15 00:32:31 ylagtab kernel: [    0.314518] TCP established hash table entries: 8192 (order: 4, 65536 bytes, linear)
+Oct 15 00:32:31 ylagtab kernel: [    0.314518] TCP bind hash table entries: 8192 (order: 6, 262144 bytes, linear)
+Oct 15 00:32:31 ylagtab kernel: [    0.314518] TCP: Hash tables configured (established 8192 bind 8192)
+Oct 15 00:32:31 ylagtab kernel: [    0.314518] UDP hash table entries: 512 (order: 2, 16384 bytes, linear)
+Oct 15 00:32:31 ylagtab kernel: [    0.314518] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes, linear)
+Oct 15 00:32:31 ylagtab kernel: [    0.314518] NET: Registered PF_UNIX/PF_LOCAL protocol family
+Oct 15 00:32:31 ylagtab kernel: [    0.316692] RPC: Registered named UNIX socket transport module.
+Oct 15 00:32:31 ylagtab kernel: [    0.316875] RPC: Registered udp transport module.
+Oct 15 00:32:31 ylagtab kernel: [    0.317028] RPC: Registered tcp transport module.
+Oct 15 00:32:31 ylagtab kernel: [    0.317179] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Oct 15 00:32:31 ylagtab kernel: [    0.317588] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+Oct 15 00:32:31 ylagtab kernel: [    0.317766] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+Oct 15 00:32:31 ylagtab kernel: [    0.317940] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+Oct 15 00:32:31 ylagtab kernel: [    0.318123] pci_bus 0000:00: resource 7 [mem 0x40000000-0xfdffffff window]
+Oct 15 00:32:31 ylagtab kernel: [    0.318335] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+Oct 15 00:32:31 ylagtab kernel: [    0.318560] PCI: CLS 0 bytes, default 64
+Oct 15 00:32:31 ylagtab kernel: [    0.318560] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x1e36a685b69, max_idle_ns: 440795255641 ns
+Oct 15 00:32:31 ylagtab kernel: [    0.319836] clocksource: Switched to clocksource tsc
+Oct 15 00:32:31 ylagtab kernel: [    0.320002] platform rtc_cmos: registered platform RTC device (no PNP device found)
+Oct 15 00:32:31 ylagtab kernel: [    0.321735] Initialise system trusted keyrings
+Oct 15 00:32:31 ylagtab kernel: [    0.322076] workingset: timestamp_bits=56 max_order=18 bucket_order=0
+Oct 15 00:32:31 ylagtab kernel: [    0.323602] NFS: Registering the id_resolver key type
+Oct 15 00:32:31 ylagtab kernel: [    0.323783] Key type id_resolver registered
+Oct 15 00:32:31 ylagtab kernel: [    0.323923] Key type id_legacy registered
+Oct 15 00:32:31 ylagtab kernel: [    0.324175] 9p: Installing v9fs 9p2000 file system support
+Oct 15 00:32:31 ylagtab kernel: [    0.325166] Key type asymmetric registered
+Oct 15 00:32:31 ylagtab kernel: [    0.325166] Asymmetric key parser 'x509' registered
+Oct 15 00:32:31 ylagtab kernel: [    0.325166] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
+Oct 15 00:32:31 ylagtab kernel: [    0.325166] io scheduler mq-deadline registered
+Oct 15 00:32:31 ylagtab kernel: [    0.325166] io scheduler kyber registered
+Oct 15 00:32:31 ylagtab kernel: [    0.328803] ACPI: AC: AC Adapter [AC] (on-line)
+Oct 15 00:32:31 ylagtab kernel: [    0.329002] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+Oct 15 00:32:31 ylagtab kernel: [    0.329486] ACPI: button: Power Button [PWRF]
+Oct 15 00:32:31 ylagtab kernel: [    0.329665] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+Oct 15 00:32:31 ylagtab kernel: [    0.329908] ACPI: button: Sleep Button [SLPF]
+Oct 15 00:32:31 ylagtab kernel: [    0.330100] ACPI: video: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+Oct 15 00:32:31 ylagtab kernel: [    0.330356] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input2
+Oct 15 00:32:31 ylagtab kernel: [    0.330984] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+Oct 15 00:32:31 ylagtab kernel: [    0.331477] ACPI: battery: Slot [BAT0] (battery present)
+Oct 15 00:32:31 ylagtab kernel: [    0.332217] Non-volatile memory driver v1.3
+Oct 15 00:32:31 ylagtab kernel: [    0.332357] Linux agpgart interface v0.103
+Oct 15 00:32:31 ylagtab kernel: [    0.332540] ACPI: bus type drm_connector registered
+Oct 15 00:32:31 ylagtab kernel: [    0.335104] loop: module loaded
+Oct 15 00:32:31 ylagtab kernel: [    0.335277] ahci 0000:00:0d.0: version 3.0
+Oct 15 00:32:31 ylagtab kernel: [    0.335653] ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
+Oct 15 00:32:31 ylagtab kernel: [    0.335916] ahci 0000:00:0d.0: AHCI 0001.0100 32 slots 1 ports 3 Gbps 0x1 impl SATA mode
+Oct 15 00:32:31 ylagtab kernel: [    0.336025] ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
+Oct 15 00:32:31 ylagtab kernel: [    0.336849] scsi host0: ahci
+Oct 15 00:32:31 ylagtab kernel: [    0.337051] ata1: SATA max UDMA/133 abar m8192@0xf0806000 port 0xf0806100 irq 21
+Oct 15 00:32:31 ylagtab kernel: [    0.337302] ata_piix 0000:00:01.1: version 2.13
+Oct 15 00:32:31 ylagtab kernel: [    0.337782] scsi host1: ata_piix
+Oct 15 00:32:31 ylagtab kernel: [    0.338304] scsi host2: ata_piix
+Oct 15 00:32:31 ylagtab kernel: [    0.338460] ata2: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+Oct 15 00:32:31 ylagtab kernel: [    0.338669] ata3: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+Oct 15 00:32:31 ylagtab kernel: [    0.339004] e100: Intel(R) PRO/100 Network Driver
+Oct 15 00:32:31 ylagtab kernel: [    0.339415] e100: Copyright(c) 1999-2006 Intel Corporation
+Oct 15 00:32:31 ylagtab kernel: [    0.339620] e1000: Intel(R) PRO/1000 Network Driver
+Oct 15 00:32:31 ylagtab kernel: [    0.339809] e1000: Copyright (c) 1999-2006 Intel Corporation.
+Oct 15 00:32:31 ylagtab kernel: [    0.505267] ata3.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+Oct 15 00:32:31 ylagtab kernel: [    0.720708] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:a6:b8:f0
+Oct 15 00:32:31 ylagtab kernel: [    0.720904] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+Oct 15 00:32:31 ylagtab kernel: [    0.720904] e1000e: Intel(R) PRO/1000 Network Driver
+Oct 15 00:32:31 ylagtab kernel: [    0.720904] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+Oct 15 00:32:31 ylagtab kernel: [    0.720904] sky2: driver version 1.30
+Oct 15 00:32:31 ylagtab kernel: [    0.722616] ohci-pci 0000:00:06.0: OHCI PCI host controller
+Oct 15 00:32:31 ylagtab kernel: [    0.722925] ohci-pci 0000:00:06.0: new USB bus registered, assigned bus number 1
+Oct 15 00:32:31 ylagtab kernel: [    0.723213] ohci-pci 0000:00:06.0: irq 22, io mem 0xf0804000
+Oct 15 00:32:31 ylagtab kernel: [    0.778807] usb usb1: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.00
+Oct 15 00:32:31 ylagtab kernel: [    0.779446] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Oct 15 00:32:31 ylagtab kernel: [    0.779913] usb usb1: Product: OHCI PCI host controller
+Oct 15 00:32:31 ylagtab kernel: [    0.780438] usb usb1: Manufacturer: Linux 6.0.0-thor_kernel-11161-g041bc24d867a-dirty ohci_hcd
+Oct 15 00:32:31 ylagtab kernel: [    0.780438] usb usb1: SerialNumber: 0000:00:06.0
+Oct 15 00:32:31 ylagtab kernel: [    0.781084] hub 1-0:1.0: USB hub found
+Oct 15 00:32:31 ylagtab kernel: [    0.781221] hub 1-0:1.0: 12 ports detected
+Oct 15 00:32:31 ylagtab kernel: [    0.781656] usbcore: registered new interface driver usblp
+Oct 15 00:32:31 ylagtab kernel: [    0.781827] usbcore: registered new interface driver usb-storage
+Oct 15 00:32:31 ylagtab kernel: [    0.782022] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+Oct 15 00:32:31 ylagtab kernel: [    0.782719] serio: i8042 KBD port at 0x60,0x64 irq 1
+Oct 15 00:32:31 ylagtab kernel: [    0.782879] serio: i8042 AUX port at 0x60,0x64 irq 12
+Oct 15 00:32:31 ylagtab kernel: [    0.783868] rtc_cmos rtc_cmos: registered as rtc0
+Oct 15 00:32:31 ylagtab kernel: [    0.783955] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input3
+Oct 15 00:32:31 ylagtab kernel: [    0.784069] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+Oct 15 00:32:31 ylagtab kernel: [    0.784719] fail to initialize ptp_kvm
+Oct 15 00:32:31 ylagtab kernel: [    0.784866] device-mapper: ioctl: 4.47.0-ioctl (2022-07-28) initialised: dm-devel@redhat.com
+Oct 15 00:32:31 ylagtab kernel: [    0.785270] hid: raw HID events driver (C) Jiri Kosina
+Oct 15 00:32:31 ylagtab kernel: [    0.785638] usbcore: registered new interface driver usbhid
+Oct 15 00:32:31 ylagtab kernel: [    0.785805] usbhid: USB HID core driver
+Oct 15 00:32:31 ylagtab kernel: [    0.786489] Initializing XFRM netlink socket
+Oct 15 00:32:31 ylagtab kernel: [    0.786772] NET: Registered PF_INET6 protocol family
+Oct 15 00:32:31 ylagtab kernel: [    0.787614] Segment Routing with IPv6
+Oct 15 00:32:31 ylagtab kernel: [    0.787761] In-situ OAM (IOAM) with IPv6
+Oct 15 00:32:31 ylagtab kernel: [    0.788055] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+Oct 15 00:32:31 ylagtab kernel: [    0.788791] NET: Registered PF_PACKET protocol family
+Oct 15 00:32:31 ylagtab kernel: [    0.789178] 9pnet: Installing 9P2000 support
+Oct 15 00:32:31 ylagtab kernel: [    0.789545] Key type dns_resolver registered
+Oct 15 00:32:31 ylagtab kernel: [    0.790356] IPI shorthand broadcast: enabled
+Oct 15 00:32:31 ylagtab kernel: [    0.790736] sched_clock: Marking stable (768663483, 22010126)->(798751287, -8077678)
+Oct 15 00:32:31 ylagtab kernel: [    0.791594] registered taskstats version 1
+Oct 15 00:32:31 ylagtab kernel: [    0.791894] Loading compiled-in X.509 certificates
+Oct 15 00:32:31 ylagtab kernel: [    0.792416] cryptomgr_test (64) used greatest stack depth: 15696 bytes left
+Oct 15 00:32:31 ylagtab kernel: [    0.792891] cryptomgr_test (67) used greatest stack depth: 15528 bytes left
+Oct 15 00:32:31 ylagtab kernel: [    0.795783] PM:   Magic number: 10:625:506
+Oct 15 00:32:31 ylagtab kernel: [    0.796127] printk: console [netcon0] enabled
+Oct 15 00:32:31 ylagtab kernel: [    0.796470] netconsole: network logging started
+Oct 15 00:32:31 ylagtab kernel: [    0.796961] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+Oct 15 00:32:31 ylagtab kernel: [    0.797627] kworker/u8:3 (88) used greatest stack depth: 14776 bytes left
+Oct 15 00:32:31 ylagtab kernel: [    0.798123] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+Oct 15 00:32:31 ylagtab kernel: [    0.798325] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+Oct 15 00:32:31 ylagtab kernel: [    0.798607] cfg80211: failed to load regulatory.db
+Oct 15 00:32:31 ylagtab kernel: [    0.798768] ALSA device list:
+Oct 15 00:32:31 ylagtab kernel: [    0.798886]   No soundcards found.
+Oct 15 00:32:31 ylagtab kernel: [    0.800085] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+Oct 15 00:32:31 ylagtab kernel: [    0.800505] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+Oct 15 00:32:31 ylagtab kernel: [    0.800674] ata1.00: 79691776 sectors, multi 128: LBA48 NCQ (depth 32)
+Oct 15 00:32:31 ylagtab kernel: [    0.800995] ata1.00: configured for UDMA/133
+Oct 15 00:32:31 ylagtab kernel: [    0.801275] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+Oct 15 00:32:31 ylagtab kernel: [    0.802509] sd 0:0:0:0: Attached scsi generic sg0 type 0
+Oct 15 00:32:31 ylagtab kernel: [    0.802513] sd 0:0:0:0: [sda] 79691776 512-byte logical blocks: (40.8 GB/38.0 GiB)
+Oct 15 00:32:31 ylagtab kernel: [    0.803130] scsi 2:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+Oct 15 00:32:31 ylagtab kernel: [    0.803146] sd 0:0:0:0: [sda] Write Protect is off
+Oct 15 00:32:31 ylagtab kernel: [    0.803684] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Oct 15 00:32:31 ylagtab kernel: [    0.803737] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Oct 15 00:32:31 ylagtab kernel: [    0.804053] sd 0:0:0:0: [sda] Preferred minimum I/O size 512 bytes
+Oct 15 00:32:31 ylagtab kernel: [    0.813036]  sda: sda1 sda2 < sda5 sda6 > sda3
+Oct 15 00:32:31 ylagtab kernel: [    0.814123] sd 0:0:0:0: [sda] Attached SCSI disk
+Oct 15 00:32:31 ylagtab kernel: [    0.997100] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input5
+Oct 15 00:32:31 ylagtab kernel: [    1.458589] sr 2:0:0:0: [sr0] scsi3-mmc drive: 32x/32x xa/form2 tray
+Oct 15 00:32:31 ylagtab kernel: [    1.458986] cdrom: Uniform CD-ROM driver Revision: 3.20
+Oct 15 00:32:31 ylagtab kernel: [    1.874138] sr 2:0:0:0: Attached scsi CD-ROM sr0
+Oct 15 00:32:31 ylagtab kernel: [    1.874496] sr 2:0:0:0: Attached scsi generic sg1 type 5
+Oct 15 00:32:31 ylagtab kernel: [    1.875122] md: Waiting for all devices to be available before autodetect
+Oct 15 00:32:31 ylagtab kernel: [    1.875318] md: If you don't use raid, use raid=noautodetect
+Oct 15 00:32:31 ylagtab kernel: [    1.875513] md: Autodetecting RAID arrays.
+Oct 15 00:32:31 ylagtab kernel: [    1.875675] md: autorun ...
+Oct 15 00:32:31 ylagtab kernel: [    1.875795] md: ... autorun DONE.
+Oct 15 00:32:31 ylagtab kernel: [    1.885271] EXT4-fs (sda5): INFO: recovery required on readonly filesystem
+Oct 15 00:32:31 ylagtab kernel: [    1.885559] EXT4-fs (sda5): write access will be enabled during recovery
+Oct 15 00:32:31 ylagtab kernel: [    1.898368] EXT4-fs (sda5): recovery complete
+Oct 15 00:32:31 ylagtab kernel: [    1.904711] EXT4-fs (sda5): mounted filesystem with ordered data mode. Quota mode: none.
+Oct 15 00:32:31 ylagtab kernel: [    1.905233] VFS: Mounted root (ext4 filesystem) readonly on device 8:5.
+Oct 15 00:32:31 ylagtab kernel: [    1.906869] devtmpfs: mounted
+Oct 15 00:32:31 ylagtab kernel: [    1.907496] Freeing unused kernel image (initmem) memory: 1540K
+Oct 15 00:32:31 ylagtab kernel: [    1.907717] Write protecting the kernel read-only data: 24576k
+Oct 15 00:32:31 ylagtab kernel: [    1.908421] Freeing unused kernel image (text/rodata gap) memory: 2032K
+Oct 15 00:32:31 ylagtab kernel: [    1.908871] Freeing unused kernel image (rodata/data gap) memory: 1340K
+Oct 15 00:32:31 ylagtab kernel: [    1.943712] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+Oct 15 00:32:31 ylagtab kernel: [    1.943918] Run /sbin/init as init process
+Oct 15 00:32:31 ylagtab kernel: [    1.944060]   with arguments:
+Oct 15 00:32:31 ylagtab kernel: [    1.944060]     /sbin/init
+Oct 15 00:32:31 ylagtab kernel: [    1.944061]   with environment:
+Oct 15 00:32:31 ylagtab kernel: [    1.944061]     HOME=/
+Oct 15 00:32:31 ylagtab kernel: [    1.944062]     TERM=linux
+Oct 15 00:32:31 ylagtab kernel: [    1.944062]     BOOT_IMAGE=/vmlinuz-linus-commit-041bc2-thor_kernel
+Oct 15 00:32:31 ylagtab kernel: [    1.971618] stty (99) used greatest stack depth: 13656 bytes left
+Oct 15 00:32:31 ylagtab kernel: [    1.977662] dmesg (100) used greatest stack depth: 13056 bytes left
+Oct 15 00:32:31 ylagtab kernel: [    2.037415] usb 1-1: new full-speed USB device number 2 using ohci-pci
+Oct 15 00:32:31 ylagtab kernel: <30>[    2.073654] udevd[176]: starting version 3.2.11
+Oct 15 00:32:31 ylagtab kernel: <30>[    2.080953] udevd[177]: starting eudev-3.2.11
+Oct 15 00:32:31 ylagtab kernel: [    2.107591] e1000 0000:00:03.0 enp0s3: renamed from eth0
+Oct 15 00:32:31 ylagtab kernel: [    3.228946] usb 1-1: New USB device found, idVendor=80ee, idProduct=0021, bcdDevice= 1.00
+Oct 15 00:32:31 ylagtab kernel: [    3.229471] usb 1-1: New USB device strings: Mfr=1, Product=3, SerialNumber=0
+Oct 15 00:32:31 ylagtab kernel: [    3.229997] usb 1-1: Product: USB Tablet
+Oct 15 00:32:31 ylagtab kernel: [    3.230357] usb 1-1: Manufacturer: VirtualBox
+Oct 15 00:32:31 ylagtab kernel: [    3.241614] input: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb1/1-1/1-1:1.0/0003:80EE:0021.0001/input/input6
+Oct 15 00:32:31 ylagtab kernel: [    3.242228] hid-generic 0003:80EE:0021.0001: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-1/input0
+Oct 15 00:32:31 ylagtab kernel: [    5.843789] Adding 2876412k swap on /dev/sda6.  Priority:1 extents:1 across:2876412k 
+Oct 15 00:32:31 ylagtab kernel: [    5.853627] EXT4-fs (sda5): re-mounted. Quota mode: none.
+Oct 15 00:32:31 ylagtab kernel: [    5.962553] EXT4-fs (sda5): re-mounted. Quota mode: none.
+Oct 15 00:32:31 ylagtab kernel: [    5.971792] EXT4-fs (sda1): mounting ext2 file system using the ext4 subsystem
+Oct 15 00:32:31 ylagtab kernel: [    5.975474] EXT4-fs (sda1): mounted filesystem without journal. Quota mode: none.
+Oct 15 00:32:31 ylagtab kernel: [    5.975995] ext2 filesystem being mounted at /boot supports timestamps until 2038 (0x7fffffff)
+Oct 15 00:32:31 ylagtab kernel: [    7.026602] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Oct 15 00:32:31 ylagtab kernel: [    7.027133] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+Oct 15 00:43:24 ylagtab kernel: [  660.487873] kworker/dying (60) used greatest stack depth: 12296 bytes left
